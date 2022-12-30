@@ -1,0 +1,54 @@
+{
+  "author": "devthejo",
+  "name": "ya-retry",
+  "description": "Abstraction for exponential and custom retry strategies for failed operations.",
+  "keywords": "retry, exponential backoff, auto-retry, multiple attempts, custom retry",
+  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "https://github.com/devthejo/ya-retry",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devthejo/ya-retry"
+  },
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 16"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fake": "0.2.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "nyc": "^15.1.0",
+    "prettier": "^2.8.0",
+    "tape": "^4.8.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/nyc ./node_modules/tape/bin/tape ./test/integration/*.js",
+    "release:major": "env SEMANTIC=major npm run release",
+    "release:minor": "env SEMANTIC=minor npm run release",
+    "release:patch": "env SEMANTIC=patch npm run release",
+    "release": "npm version ${SEMANTIC:-patch} -m \"Release %s\" && git push && git push --tags && npm publish",
+    "lint": "eslint .",
+    "postinstall": "[ -d '.husky' ] && husky install || true",
+    "precommit": "lint-staged"
+  }
+}

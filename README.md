@@ -1,4 +1,4 @@
-# try
+# ya-try
 
 based on
 - https://github.com/tim-kos/node-retry (see doc for api)

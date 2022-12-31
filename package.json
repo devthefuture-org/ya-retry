@@ -4,7 +4,7 @@
   "description": "Abstraction for exponential and custom retry strategies for failed operations.",
   "keywords": "retry, exponential backoff, auto-retry, multiple attempts, custom retry",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/devthejo/ya-retry",
   "repository": {
     "type": "git",

@@ -5,10 +5,10 @@
   "keywords": "retry, exponential backoff, auto-retry, multiple attempts, custom retry",
   "license": "MIT",
   "version": "1.2.0",
-  "homepage": "https://github.com/devthejo/ya-retry",
+  "homepage": "https://codeberg.org/devthefuture/ya-retry",
   "repository": {
     "type": "git",
-    "url": "git://github.com/devthejo/ya-retry"
+    "url": "git://codeberg.org/devthefuture/ya-retry"
   },
   "files": [
     "lib"
